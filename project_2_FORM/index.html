@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROJECT_2</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: gray;
+        }
+
+        .form {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            margin-top: 30px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 20px;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline-color: red;
+        }
+
+        button {
+            background-color: red;
+            color: white;
+            padding: 5px;
+            border: 2px solid transparent;
+            border-radius: 20px;
+            transition: 0.3s ease-in;
+        }
+
+
+        button:hover {
+            background-color: gray;
+            color: black;
+            border: 2px solid red;
+            cursor: pointer;
+            transition: 0.3s ease-out;
+        }
+
+        .button {
+            margin-top: 20px;
+            display: flex;
+            justify-content: end;
+        }
+
+        .textarea {
+            grid-column: 1/-1;
+        }
+
+        .input,
+        .textarea {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        input,
+        textarea,
+        select {
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="text">
+            <h1>Job Application</h1>
+        </div>
+
+        <div class="form">
+
+            <div class="input">
+                <label for="first-name">First Name</label>
+                <input type="text" name="first-name" id="first-name" placeholder="ENTER YOUR Fisrt Name">
+            </div>
+            <div class="input">
+                <label for="last-name">Last Name</label>
+                <input type="text" name="last-name" id="last-name" placeholder="ENTER YOUR Last Name">
+            </div>
+            <div class="input">
+                <label for="email">Email</label>
+                <input type="email" name="email" placeholder="Enter your Email" id="email">
+            </div>
+            <div class="input">
+                <label for="Job-Role">Job-Role</label>
+                <select name="Job-Role" id="Job-Role">
+                    <option value="">Select Job-Role</option>
+                    <option value="frontend"> FRONTEND</option>
+                    <option value="backend">BACKEND</option>
+                    <option value="full-stack">FULL-STACK</option>
+                </select>
+            </div>
+            <div class="textarea">
+                <label for="address">Enter address
+                </label>
+                <textarea name="address" id="address" cols="auto-fit" rows="2"
+                    placeholder="Enter your address"></textarea>
+            </div>
+            <div class="input">
+                <label for="City">City</label>
+                <input type="text" name="City" placeholder="Enter your City Name" id="City">
+            </div>
+            <div class="input">
+                <label for="Pincode">Pincode</label>
+                <input type="number" name="Pincode" placeholder="Enter your Pincode" id="Pincode">
+            </div>
+            <div class="input">
+                <label for="Date">Date</label>
+                <input type="date" name="Date" id="Date">
+            </div>
+            <div class="input">
+                <label for="file">Upload Your file
+                </label>
+                <input type="file" name="file" id="file">
+            </div>
+        </div>
+        <div class="button">
+            <button type="submit">Apply Now</button>
+        </div>
+    </div>
+</body>
+
+</html>
